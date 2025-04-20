@@ -1,0 +1,44 @@
+<div class="choice-container">
+    <h3>Filter by price :</h3>
+    <div class="choices">
+        <div class="low">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="radio" id="flexSwitchCheckDefault"
+                   value="all"
+                   [(ngModel)]="searchValue"
+                   (change)="buttonOn()"
+                 >
+                <label class="form-check-label" for="flexSwitchCheckDefault" >
+                    {{'All prices('+allPrices+')'}}
+                </label>
+            </div>
+        </div>
+        <div class="medium">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="radio" id="flexSwitchCheckDefault"
+                    value="med"
+                    [(ngModel)]="searchValue"
+                    (change)="buttonOn()"
+                >
+                <label class="form-check-label" for="flexSwitchCheckDefault" >
+                    {{'Medium prices('+medPrices+')'}}
+                </label>
+            </div>
+        </div>
+        <div class="high">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="radio" id="flexSwitchCheckDefault"
+                    [(ngModel)]="searchValue"
+                    value="high"
+                    (change)="buttonOn()"
+                >
+                <label class="form-check-label" for="flexSwitchCheckDefault" >
+                    {{'High prices('+highPrices+')'}}
+                </label>
+            </div>
+        </div>
+        
+      
+        
+    </div>
+</div>

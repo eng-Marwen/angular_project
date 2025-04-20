@@ -1,0 +1,31 @@
+<app-search
+    (emitter)="gprim($event)"
+></app-search>
+<app-filter 
+    [allPrices]="getAll()"
+    [highPrices]="getHigh()"
+    [medPrices]="getMed()"
+    (btnchanged)="g($event)"
+></app-filter>
+<div *ngFor="let item of products" class="products-container" [ngStyle]="{background:item.Available==='Available'?'#d5f5e3':'#fadbd8'}">
+    <div class="pro-img">
+        <img [src]="item.image" alt="">
+    </div>
+    <div class="descr">
+        <h5 class="title">{{item.name}}</h5>
+        <div class="info">
+            <p [ngStyle]="{color:item.Available==='Available'?'green':'red'}"><b>{{item.Available}}</b></p>
+            <p ><b><span class="makeitbold">Price:</span>{{item.price}} $</b></p>
+            <p><b><span class="makeitbold">Color:</span>{{item.color}}</b></p>
+        </div>
+    </div>
+    <div class="buttons">
+        <button type="button" class="btn btn-success" >Show Details</button>
+        <button type="button" class="btn btn-warning" *ngIf="item.Available.toLowerCase()==='available';else notify">Buy Now</button>
+        <ng-template #notify>
+            <button type="button"  class="btn btn-danger">Notify Me</button>
+        </ng-template>
+        
+    </div>
+    
+</div>

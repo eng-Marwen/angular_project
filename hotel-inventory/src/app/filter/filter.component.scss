@@ -1,0 +1,21 @@
+.choice-container{
+    display: flex;
+    margin-bottom: 10px;
+    h3{
+        margin-right:15px ;
+    }
+}
+.choices{
+    // width: 505px;
+    display: flex;
+    justify-content: space-around;
+    color: orange;
+    font-weight: 400;
+    div{
+        padding-right: 15px;
+    } 
+    // input{
+    //     margin-right: 8px;
+    // }
+   
+}

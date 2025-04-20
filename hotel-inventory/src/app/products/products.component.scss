@@ -1,0 +1,46 @@
+.products-container{
+    display: flex;
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+.descr{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 140px;
+    .title{
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
+    .makeitbold{
+        font-weight: bolder;
+    }
+
+}
+.info{
+    display: flex;
+    p{
+        padding-right: 70px;
+
+    }
+}
+.buttons{
+    position: relative;
+    right: -626px;
+    top: 4px;
+    .btn.btn-success{
+        height: 38px;
+        font-weight: 500;
+        position: absolute;
+        left: -140px;
+    }
+    .btn.btn-warning{
+        font-weight: 500;
+    }
+    .btn:hover{
+        border: solid black 2px;
+    }
+
+
+}

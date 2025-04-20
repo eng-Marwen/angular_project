@@ -1,0 +1,29 @@
+.par{
+    padding: 40px;
+    text-align: center;
+    background-color: lightpink;
+}
+.pcontainer{
+    background-color: aqua;
+}
+.container{
+    margin-top: 10px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+
+    .child{
+     
+        
+        display: flex;
+        .name{
+            width:60%;
+            background-color: gray;
+        }
+        .stat{
+            background-color: lightpink;
+            width: 40%;
+        }
+        padding: 0;
+    }
+}

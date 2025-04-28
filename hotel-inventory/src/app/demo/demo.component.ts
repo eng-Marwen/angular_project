@@ -50,7 +50,7 @@ export class DemoComponent implements OnInit,DoCheck{
   ngOnInit(): void {
     this.obs.subscribe(
       (val:any)=>{
-        console.log(val);
+        // console.log(val);
       },
 
     )

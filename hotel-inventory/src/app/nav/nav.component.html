@@ -3,10 +3,13 @@
         <h2>{{title}}</h2>
     </div>
     <div class="site-menu">
+        <button (click)="login()" class="btn btn-success">Login</button>
+        <button (click)="logout()" class="btn btn-danger">Logout</button>
         <a  [routerLink]="'home'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">HOME</a >
         <a  [routerLink]="'about'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">ABOUT</a>
         <a  [routerLink]="'contact'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">LOGIN</a>
-        <a  [routerLink]="'home'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">CONTACT</a>
-        <a  [routerLink]="'demo'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">PRODUCTS</a>
+        <a  [routerLink]="'home'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">REGISTER</a>
+        <a  [routerLink]="'products'"[routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">PRODUCTS</a>
+        <a  [routerLink]="'contactUs'"[routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">Contact Us</a>
     </div>
 </div>

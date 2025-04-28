@@ -7,7 +7,8 @@
     [medPrices]="getMed()"
     (btnchanged)="g($event)"
 ></app-filter>
-<div *ngFor="let item of products" class="products-container" [ngStyle]="{background:item.Available==='Available'?'#d5f5e3':'#fadbd8'}">
+<div *ngFor="let item of products" class="products-container" [ngStyle]="{background:item.Available==='Available'?'#d5f5e3':'#fadbd8'}"
+ id="f1">
     <div class="pro-img">
         <img [src]="item.image" alt="">
     </div>

@@ -19,14 +19,19 @@ import { AddnewComponent } from './addnew/addnew.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ProductsGuard } from './Services-1/products-guard.service';
+import { AuthService } from './Services-1/auth.service';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { deactivate } from './Services-1/deactivateGuard.service';
 
 const appRoutes:Routes=[
   {path:'home',component:ContainerComponent},
   {path:'',component:ContainerComponent},
   {path:'contact',component:LoginComponent},
-  {path:'demo',component:DemoComponent},
+  {path:'products',component:DemoComponent,canActivate:[ProductsGuard]},
   {path:'SinIn',component:LoginComponent},
-  {path:'SinUp',component:SignupComponent}
+  {path:'SinUp',component:SignupComponent},
+  {path:'contactUs',component:ContactUsComponent,canDeactivate:[deactivate]}
 ]
 
 @NgModule({
@@ -45,6 +50,7 @@ const appRoutes:Routes=[
     AddnewComponent,
     LoginComponent,
     SignupComponent,
+    ContactUsComponent,
 
   ],
   imports: [
@@ -54,7 +60,7 @@ const appRoutes:Routes=[
     FormsModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [ProductsGuard,AuthService,deactivate],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
